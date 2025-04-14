@@ -3,6 +3,7 @@ import ThemeProvider from "../theme/provider";
 import { useCustomFonts } from "../hooks/use-fonts";
 import { View, ActivityIndicator } from "react-native";
 import "../global.css";
+import { AuthProvider } from "@/contexts";
 
 const RootLayout = () => {
 	const fontsLoaded = useCustomFonts();
@@ -17,16 +18,22 @@ const RootLayout = () => {
 
 	return (
 		<ThemeProvider>
-			<Stack>
-				<Stack.Screen
-					name="(root)/index"
-					options={{ headerShown: false }}
-				/>
-				<Stack.Screen
-					name="(auth)/login"
-					options={{ headerShown: false }}
-				/>
-			</Stack>
+			<AuthProvider>
+				<Stack>
+					<Stack.Screen
+						name="(root)/index"
+						options={{ headerShown: false }}
+					/>
+					<Stack.Screen
+						name="(auth)/login"
+						options={{ headerShown: false }}
+					/>
+					<Stack.Screen
+						name="(auth)/register"
+						options={{ headerShown: false }}
+					/>
+				</Stack>
+			</AuthProvider>
 		</ThemeProvider>
 	);
 };
