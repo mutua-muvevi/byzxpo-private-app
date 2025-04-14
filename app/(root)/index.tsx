@@ -1,6 +1,7 @@
 // app/index.tsx
 import { View, Text, TouchableOpacity } from "react-native";
 import { useTheme } from "../../theme/provider";
+import { router } from "expo-router";
 
 export default function Home() {
 	const { mode, setMode, preset, setPreset, theme } = useTheme();
@@ -33,6 +34,21 @@ export default function Home() {
 			>
 				<Text className="text-white text-button">Toggle Preset</Text>
 			</TouchableOpacity>
+			
+			{/* button to go to lofin and the other to register */}
+			<TouchableOpacity
+				className="mt-4 px-4 py-2 bg-primary rounded-lg shadow-2"
+				onPress={() => router.push("/(auth)/login")}
+			>
+				<Text className="text-white text-button">Login</Text>
+			</TouchableOpacity>
+			<TouchableOpacity
+				className="mt-4 px-4 py-2 bg-primary rounded-lg shadow-2"
+				onPress={() => router.push("/(auth)/register")}
+			>
+				<Text className="text-white text-button">Register</Text>
+			</TouchableOpacity>
+
 		</View>
 	);
 }

@@ -1,3 +1,7 @@
+import { useTheme } from "./provider";
+
+export { useTheme };
+
 // app/theme/palette.ts
 export const grey = {
 	0: "#FFFFFF",
