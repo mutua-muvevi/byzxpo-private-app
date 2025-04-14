@@ -3,7 +3,7 @@ import { View, Text } from "react-native";
 import { useTheme } from "../../theme";
 import { LoginForm } from "../../forms";
 
-export default function Login() {
+const Login = () => {
 	const { theme } = useTheme();
 
 	return (
@@ -18,3 +18,5 @@ export default function Login() {
 		</View>
 	);
 }
+
+export default Login;

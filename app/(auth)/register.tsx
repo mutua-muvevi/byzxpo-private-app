@@ -3,7 +3,7 @@ import { View, Text } from "react-native";
 import { useTheme } from "../../theme";
 import { RegisterForm } from "../../forms";
 
-export default function Register() {
+const Register = () => {
 	const { theme } = useTheme();
 
 	return (
@@ -17,4 +17,6 @@ export default function Register() {
 			<RegisterForm />
 		</View>
 	);
-}
+};
+
+export default Register;
