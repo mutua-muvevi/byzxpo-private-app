@@ -10,7 +10,7 @@ const RootLayout = () => {
 
 	if (!fontsLoaded) {
 		return (
-			<View className="flex-1 items-center justify-center">
+			<View className="flex-1 items-center justify-center bg-primary">
 				<ActivityIndicator size="large" color="#027cf5" />
 			</View>
 		);
@@ -22,11 +22,11 @@ const RootLayout = () => {
 				<Stack>
 					<Stack.Screen
 						name="(root)/index"
-						options={{ headerShown: false }}
+						options={{ headerShown: true }}
 					/>
 					<Stack.Screen
 						name="(auth)/login"
-						options={{ headerShown: false }}
+						options={{ headerShown: true }}
 					/>
 					<Stack.Screen
 						name="(auth)/register"
