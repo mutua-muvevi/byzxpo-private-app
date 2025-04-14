@@ -32,6 +32,18 @@ const RootLayout = () => {
 						name="(auth)/register"
 						options={{ headerShown: false }}
 					/>
+					<Stack.Screen
+						name="(root)/single-map"
+						options={{ headerShown: false }}
+					/>
+					<Stack.Screen
+						name="(root)/multi-map"
+						options={{ headerShown: false }}
+					/>
+					<Stack.Screen
+						name="(root)/dynamic-map"
+						options={{ headerShown: false }}
+					/>
 				</Stack>
 			</AuthProvider>
 		</ThemeProvider>

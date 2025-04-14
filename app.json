@@ -7,15 +7,30 @@
 		"icon": "./assets/images/icon.png",
 		"scheme": "myapp",
 		"userInterfaceStyle": "automatic",
-		"newArchEnabled": true,
+		"newArchEnabled": false,
 		"ios": {
-			"supportsTablet": true
+			"supportsTablet": true,
+			"config": {
+				"googleMapsApiKey": "AIzaSyDU-M4oHQf1qs8Xhb5MjTapdROYposAPgc"
+			},
+			"infoPlist": {
+				"NSLocationWhenInUseUsageDescription": "Allow location access to show nearby businesses."
+			}
 		},
 		"android": {
 			"adaptiveIcon": {
 				"foregroundImage": "./assets/images/adaptive-icon.png",
 				"backgroundColor": "#ffffff"
-			}
+			},
+			"config": {
+				"googleMaps": {
+					"apiKey": "AIzaSyDU-M4oHQf1qs8Xhb5MjTapdROYposAPgc"
+				}
+			},
+			"permissions": [
+				"android.permission.ACCESS_FINE_LOCATION",
+				"android.permission.ACCESS_COARSE_LOCATION"
+			]
 		},
 		"web": {
 			"bundler": "metro",

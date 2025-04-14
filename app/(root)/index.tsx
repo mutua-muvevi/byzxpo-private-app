@@ -48,6 +48,24 @@ export default function Home() {
 			>
 				<Text className="text-white text-button">Register</Text>
 			</TouchableOpacity>
+			<TouchableOpacity
+				className="mt-4 px-4 py-2 bg-primary rounded-lg shadow-2"
+				onPress={() => router.push("/(root)/single-map")}
+			>
+				<Text className="text-white text-button">Map</Text>
+			</TouchableOpacity>
+			<TouchableOpacity
+				className="mt-4 px-4 py-2 bg-primary rounded-lg shadow-2"
+				onPress={() => router.push("/(root)/multi-map")}
+			>
+				<Text className="text-white text-button">Multi</Text>
+			</TouchableOpacity>
+			<TouchableOpacity
+				className="mt-4 px-4 py-2 bg-primary rounded-lg shadow-2"
+				onPress={() => router.push("/(root)/dynamic-map")}
+			>
+				<Text className="text-white text-button">dynamic</Text>
+			</TouchableOpacity>
 
 		</View>
 	);
